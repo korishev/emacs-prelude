@@ -4,4 +4,4 @@
 
 ;; Add Line Numbers
 (setq linum-format "%4d \u2502")
-(global linum-mode)
+(global-linum-mode 1)
