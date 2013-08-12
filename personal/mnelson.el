@@ -1,5 +1,7 @@
 (disable-theme 'zenburn)
-(load-theme 'solarized-dark t)
+;;(load-theme 'solarized-dark t)
+;;(load-theme 'spolsky t)
+(load-theme 'grandshell t)
 (setq whitespace-line-column 200)
 
 ;; set font to source code pro
