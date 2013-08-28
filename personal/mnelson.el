@@ -3,6 +3,8 @@
 ;;(load-theme 'spolsky t)
 (load-theme 'grandshell t)
 (setq whitespace-line-column 200)
+(setq prelude-whitespace t)
+(setq prelude-cleanup-whitespace-on-save t)
 
 ;; set font to source code pro
 ;; FONT NOT FOUND/WORKING
@@ -20,6 +22,12 @@
 
 (require 'multiple-cursors)
 (require 'rcodetools)
+
+(defadvice rspec-compile (around rspec-compile-around)
+  "Use BASH shell for running the specs because of ZSH issues."
+  (let ((shell-file-name "/bin/bash"))
+    ad-do-it))
+(ad-activate 'rspec-compile)
 
 (setq mac-option-modifier 'meta)
 (setq mac-command-modifier 'super)
