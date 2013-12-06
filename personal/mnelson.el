@@ -40,3 +40,7 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-w") 'whitespace-cleanup)
 (global-set-key (kbd "C-c C-c") 'xmp)
+
+;; turn off uu for undo tree, make it UU
+(key-chord-define-global "uu" nil)
+(key-chord-define-global "UU" 'undo-tree-visualize)
